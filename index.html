@@ -15,25 +15,64 @@
     }
 
     header {
-      padding: 80px 20px;
+      padding: 60px 20px;
       background: linear-gradient(180deg, #120015, #000);
     }
 
+    .hero {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero-logo {
+      max-width: 260px;
+      width: 80%;
+      height: auto;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 25px rgba(255, 0, 0, 0.7));
+    }
+
     h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       color: #ff3b3b;
       text-shadow: 0 0 20px #ff3b3b;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      line-height: 1.6;
+      margin-bottom: 25px;
     }
 
     .ip-box {
-      margin: 30px auto;
+      margin: 20px auto;
       display: inline-block;
       padding: 15px 30px;
       border: 2px solid #00e5ff;
       border-radius: 10px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       background: rgba(0, 229, 255, 0.1);
       box-shadow: 0 0 15px #00e5ff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #ff0000, #ff6a00);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 20px #ff3b3b;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 40px #ff3b3b;
+      transform: scale(1.05);
     }
 
     section {
@@ -44,7 +83,7 @@
 
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       margin-top: 40px;
     }
@@ -70,35 +109,41 @@
       font-size: 0.9rem;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 35px;
-      border-radius: 50px;
-      background: linear-gradient(90deg, #ff0000, #ff6a00);
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 20px #ff3b3b;
-      transition: 0.3s;
-    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
 
-    .btn:hover {
-      box-shadow: 0 0 40px #ff3b3b;
-      transform: scale(1.05);
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .hero-logo {
+        max-width: 200px;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>DEMONCORESMP</h1>
-  <p>Der dämonische Minecraft Survival Server</p>
-  <div class="ip-box">
-    IP: <b>DemonCore.mine-hoster.net</b>
+  <div class="hero">
+    <!-- Hier dein Bild einfügen -->
+    <img src="logo.jpg" alt="DemonCoreSMP Logo" class="hero-logo">
+
+    <h1>DEMONCORE SMP</h1>
+    <p class="subtitle">
+      Beschütze deinen Core.<br>
+      Baue Spawner aus.<br>
+      Verdiene Macht.
+    </p>
+
+    <div class="ip-box">
+      IP: <b>DemonCore.mine-hoster.net</b>
+    </div>
+
+    <a class="btn" href="#">Jetzt beitreten</a>
   </div>
-  <br>
-  <a class="btn" href="#">Jetzt beitreten</a>
 </header>
 
 <section>
@@ -107,23 +152,22 @@
   <div class="features">
     <div class="card">
       <h3>🔥 Der Core</h3>
-      <p>Auf dem Server besitzt jedes Team einen Core, den es beschützen muss.  
-      Wird dein Core zerstört, bist du raus!</p>
+      <p>Jedes Team besitzt einen Core. Wird er zerstört, verliert ihr alles.</p>
     </div>
 
     <div class="card">
-      <h3>⛏️ Spawner & Steine</h3>
-      <p>Spezielle Spawner generieren wertvolle Steine, die du sammeln und verkaufen kannst.</p>
+      <h3>⛏️ Spawner</h3>
+      <p>Spezielle Spawner generieren Steine, die du verkaufen kannst.</p>
     </div>
 
     <div class="card">
-      <h3>💰 Wirtschaftssystem</h3>
-      <p>Verdiene Geld durch Handel, verkaufe Ressourcen und werde der reichste Spieler.</p>
+      <h3>💰 Wirtschaft</h3>
+      <p>Verdiene Geld durch Handel, Upgrades und Farmen.</p>
     </div>
 
     <div class="card">
-      <h3>⚡ PvP & Raids</h3>
-      <p>Überfalle gegnerische Basen, verteidige deinen Core und dominiere den Server.</p>
+      <h3>⚡ PvP</h3>
+      <p>Greife andere Basen an und verteidige deinen Core.</p>
     </div>
   </div>
 </section>
